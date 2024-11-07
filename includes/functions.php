@@ -5,8 +5,8 @@ function sanitizeInput($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
 function crearCliente($nombre, $correo, $telefono,$direccion) {
-    global $tasksCollection;
-    $resultado = $tasksCollection->insertOne([
+    global $clientesCollection;
+    $resultado = $clientesCollection->insertOne([
         'nombre' => sanitizeInput($nombre),
         'correo' => sanitizeInput($correo),
         'telefono' => sanitizeInput($telefono),
@@ -16,17 +16,17 @@ function crearCliente($nombre, $correo, $telefono,$direccion) {
 }
 
 function obtenerCliente() {
-    global $tasksCollection;
-    return $tasksCollection->find();
+    global $clientesCollection;
+    return $clientesCollection->find();
 }
 function obtenerClientePorId($id) {
-    global $tasksCollection;
-    return $tasksCollection->findOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+    global $clientesCollection;
+    return $clientesCollection->findOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
 }
 
 function actualizarCliente($id, $nombre, $correo, $telefono,$direccion) {
-    global $tasksCollection;
-    $resultado = $tasksCollection->updateOne(
+    global $clientesCollection;
+    $resultado = $clientesCollection->updateOne(
         ['_id' => new MongoDB\BSON\ObjectId($id)],
         ['$set' => [
             'nombre' => sanitizeInput($nombre),
@@ -39,7 +39,7 @@ function actualizarCliente($id, $nombre, $correo, $telefono,$direccion) {
     return $resultado->getModifiedCount();
 }
 function eliminarCliente($id) {
-    global $tasksCollection;
-    $resultado = $tasksCollection->deleteOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+    global $clientesCollection;
+    $resultado = $clientesCollection->deleteOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
     return $resultado->getDeletedCount();
 }

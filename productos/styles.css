@@ -1,0 +1,118 @@
+body {
+    font-family: Georgia, serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 30px;
+    background-color: #11c3cf;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+a {
+    color: #004085;
+    text-decoration: underline;
+}
+
+.button, input[type="submit"] {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+tr, td {
+    background-color: #e0e3e3;
+}
+
+th {
+    background-color: #444;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #c3e6cb;
+    color: #155724;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.error {
+    background-color: #f5c6cb;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+}.button:hover, input[type="submit"]:hover {
+    background-color: #09b7e7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button-editar, .button-eliminar {
+    display: inline-block;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #09b7e7;
+}
+
+.button-editar:hover {
+    background-color: #26f854;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-eliminar:hover {
+    background-color: #ff011a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
